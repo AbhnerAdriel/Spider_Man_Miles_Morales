@@ -1,0 +1,311 @@
+/* RESET: */
+* {margin: 0; padding: 0; border: 0; box-sizing: border-box; font-family: 'Mukta', sans-serif;}
+html, body {height: 100%;}
+
+/* CLASSES E TAGS ESPECIAIS: */
+.overlay {
+    width: 100%; 
+    height: 100%; 
+    background: linear-gradient(110deg, #0A0C10 25%, rgba(16, 16, 16, 0.7) 50%, #0A0C10 75%);
+    position: absolute; 
+    top: 0; 
+    left: 0;
+}
+.text-center {position: absolute; left: 0; top: 50%; transform: translateY(-50%); padding: 0 5%;}
+.container-size {width: 100%; max-width: 1400px; height: auto; margin: 0 auto;}
+.clear {clear: both;}
+
+/* HEADER DO SITE: */
+header {width: 100%; padding: 20px 2%; background: transparent; position: absolute; top: 0; z-index: 1;}
+header .logo {width: 50px; float: left;}
+header .logo img {width: 100%;}
+header .menu {float: left; margin: 25px 0 0 45px;}
+header .menu ul {list-style: none;}
+header .menu ul li {float: left; margin: 0 20px; transform: scale(1);}
+header .menu li a {text-decoration: none; font-size: 15px; text-transform: uppercase; color: #959698;}
+header .menu li a:not(.trailer-link):hover {color: #FFF;}
+header .menu li .trailer-link {
+    color: rgb(247, 30, 25); 
+    border: 2px solid rgb(247, 30, 25);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+header .menu li:last-of-type:hover {transform: scale(1.03);}
+header .menu-mobile {
+    display: none;
+    float: right;
+    width: 32px;
+    height: 32px;
+    background-image: url('../_media/_images/menu.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 16px;
+    cursor: pointer;
+}
+header .menu-mobile ul {list-style: none; display: none;}
+
+/* SEÇÃO BANNER ANIMADO: */
+.section-banner-animado {width: 100%; /*height: 100vh;*/ min-height: 100vh; max-height: 800px; overflow: hidden; position: relative;}
+.section-banner-animado video {
+    height: 100%; 
+    position: absolute; 
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+.flex-group-banner {
+    display: flex; 
+    width: 100%;
+    flex-direction: row; 
+    position: absolute; 
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.flex-group-banner .text-group {width: 40%; position: relative;}
+.flex-group-banner .text-group .text-center {padding: 0 10%;}
+.text-group .text-center img {width: 100%;}
+.text-group .text-center p {color: #959698; font-size: 17px; line-height: 26px; text-align: justify; margin-top: 15px;}
+.text-group .text-center .btn-skew {
+    display: inline-block;
+    text-decoration: none; 
+    text-transform: uppercase;
+    background: linear-gradient(200deg, rgb(250, 38, 32), rgb(247, 30, 25));
+    color: #FFF;
+    margin-top: 25px;
+    padding: 10px 30px;
+    transform: scale(1) skewX(-10deg);
+    border-radius: 3px;
+}
+.text-group .text-center .btn-skew:hover {
+    transform: scale(1.04) skewX(-10deg); 
+    box-shadow: 0px 0px 8px 1.5px rgba(252, 24, 18, 0.3);
+}
+.flex-group-banner .img-spidey-group {
+    width: 60%;
+    padding-top: 40%;
+    background-image: url('../_media/_images/spider-man.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.scroll-down {
+    width: 50px; 
+    height: 50px; 
+    background-image: url('../_media/_images/mouse-scrool-down-red.png'); 
+    background-position: center; 
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* SEÇÃO INFORMAÇÕES SOBRE O JOGO: */
+.section-the-game {width: 100%; padding: 160px 2%; background-color: #0A0C10;}
+.section-the-game .flex-info-game {width: 100%; display: flex;}
+.section-the-game .flex-info-game:not(:last-child) {margin-bottom: 120px;}
+.flex-info-game:nth-child(2n + 1) {flex-direction: row-reverse;}
+.flex-info-game .text-flex-info-game {width: 55%; color: #959698; position: relative;}
+.text-flex-info-game h2 {font-size: 30px; text-transform: uppercase; text-align: left;}
+.text-flex-info-game h2::after {content: ''; display: block; width: 36px; height: 3px; background-color: rgb(247, 30, 25); margin-left: 4px;}
+.text-flex-info-game p {margin-top: 20px; text-align: justify;}
+.flex-info-game .img-flex-info-game {width: 45%; overflow: hidden; /*cursor: pointer;*/}
+.img-flex-info-game .img-zoom {
+    width: 100%;
+    padding-top: 65%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+
+}
+.flex-info-game .img-flex-info-game:hover {box-shadow: 0px 0px 5px 2px rgba(252, 24, 18, 0.5);}
+.flex-info-game .img-flex-info-game:hover .img-zoom {transform: scale(1.1);}
+
+/* SEÇÃO ENTRAR EM CONTATO POR EMAIL: */
+.section-send-email {
+    width: 100%;
+    height: 640px;
+    background-image: url('../_media/_images/contato-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 60px 2%;
+    position: relative;
+}
+.section-send-email > .overlay {background: rgba(10, 12, 16, 0.7);}
+.section-send-email > .container-size {
+    max-width: 1000px; 
+    height: 100%;
+    z-index: 1; 
+    position: relative; 
+    color: #959698; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-send-email h2 {font-size: 30px; text-transform: uppercase; display: inline-block;}
+.section-send-email h2::after {content: ''; display: block; width: 50px; height: 3px; background-color: rgb(247, 30, 25); margin: 0 auto;}
+.section-send-email p {display: inline-block; width: 80%; margin: 30px 0; font-size: 18px;}
+.section-send-email form {display: flex; width: 65%;}
+.section-send-email form input[type=text] {width: 80%; height: 50px; padding: 10px 13px; font-size: 18px; color: #0A0C10;}
+.section-send-email form input[type=text]::placeholder {color: #0A0C10;}
+.section-send-email form input[type=submit] {width: 20%; background-color:rgb(247, 30, 25); color: #FFF; font-size: 18px; text-transform: uppercase; cursor: pointer;}
+.section-send-email form input[type=submit]:hover {background-color: rgb(250, 38, 32);}
+.section-send-email form input[type=text]:focus,
+.section-send-email form input[type=submit]:focus {outline: 0;}
+
+/* SEÇÃO DE WALLPAPERS DO SITE: */
+.section-wallpapers {width: 100%; padding: 80px 2%; background-color: #0A0C10;}
+.section-wallpapers > .container-size > h2  {text-align: center; font-size: 30px; color: #959698; text-transform: uppercase; margin-bottom: 50px;}
+.section-wallpapers > .container-size > h2::before {content: ''; display: block; margin: 0 auto; background-color: rgb(247, 30, 25); width: 60px; height: 3px;}
+.section-wallpapers > .container-size > h2::after {content: ''; display: block; margin: 0 auto; background-color: rgb(247, 30, 25); width: 60px; height: 3px;}
+.wallpaper-selected-zoom {width: 85%; overflow: hidden; cursor: pointer; margin: 0 auto;}
+.wallpaper-selected {
+    width: 100%;
+    padding-top: 58%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+.wallpaper-selected-zoom:hover .wallpaper-selected {transform: scale(1.1);}
+.nav-gallery-parent {width: 85%; padding: 50px; position: relative; margin: 0 auto;}
+.nav-gallery-parent .arrow {
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.arrow-left {
+    background-image: url('../_media/_images/left-arrow.png');
+    left: 1%;
+}
+.arrow-right {
+    background-image: url('../_media/_images/right-arrow.png');
+    right: 1%;
+}
+.nav-gallery {width: 100%; overflow: hidden;}
+.nav-gallery-wrapper {width: 200%;}
+.mini-img-wrapper {float: left; width: calc(100% / 6); padding: 10px;}
+.mini-img {width: 100%; padding-top: 70%; background-size: cover; background-position: center; cursor: pointer;}
+
+/* TRAILER DO JOGO: */
+.section-trailer-game {
+    width: 100%; 
+    height: 680px;
+    padding: 50px 2%;
+    background-image: url('../_media/_images/trailer-bg.jpg');
+    background-position: right center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.section-trailer-game > .overlay {
+    background: linear-gradient(110deg,#0A0C10 60%, rgba(16, 16, 16, 0.6) 80%);
+}
+.section-trailer-game h2 {
+    width: 50%; 
+    color: #959698; 
+    font-size: 30px; 
+    text-transform: uppercase; 
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.section-trailer-game h2::after {content: ''; width: 50px; height: 3px; display: block; margin: 0 auto; background-color: rgb(247, 30, 25);}
+.section-trailer-game .trailer-game {
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    border: 5px solid rgb(247, 30, 25);
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px -1px rgba(247, 30, 25, 0.7);
+}
+
+/* TRATAMENTO DA RESPONSIVIDADE DO SITE: */
+
+@media screen and (max-width: 1024px) {
+    /* SEÇÃO BANNER ANIMADO: */
+    .scroll-down {width:40px; height: 40px; background-image: url('../_media/_images/vertical-scroll.png');}
+    /* SEÇÃO INFORMAÇÕES SOBRE O JOGO: */
+    .section-the-game .flex-info-game {display: block; text-align: center;} 
+    .section-the-game .flex-info-game:not(:last-child) {margin-bottom: 50px;}
+    .flex-info-game .text-flex-info-game {width: 75%; position: static; display: inline-block;}
+    .text-flex-info-game > .text-center {position: static; transform: none; padding: 30px 0;}
+    .flex-info-game .img-flex-info-game {width: 75%; display: inline-block;}
+    .flex-info-game .img-flex-info-game:hover {box-shadow: none;}
+}
+@media screen and (max-width: 800px) {
+    /* HEADER DO SITE: */
+    header {padding: 25px 6%;}
+    header .menu {display: none;}
+    header .menu-mobile {display: block;}
+
+    /* SEÇÃO BANNER ANIMADO: */
+    .section-banner-animado {background-color: #0A0C10; padding-top: 135px; height: auto; min-height: none; max-height: none;}
+    .section-banner-animado > .overlay {display: none;}
+    .section-banner-animado video {display: none;}
+    .flex-group-banner {flex-direction: column-reverse; align-items: center; position: static; transform: none; padding-bottom: 65px;}
+    .flex-group-banner .text-group {width: 70%; position: static; margin-top: 50px;}
+    .flex-group-banner .text-group .text-center {position: static; transform: none; padding: 0; text-align: center;}
+    .text-group .text-center p {font-size: 16px; line-height: 23px;}
+    .text-group .text-center .btn-skew {transform: none; border-radius: 3px; margin-top: 30px;}
+    .text-group .text-center .btn-skew:hover {transform: none;}
+    .flex-group-banner .img-spidey-group {width: 70%; padding-top: 50%;}
+    .scroll-down {display: none;}
+
+    /* SEÇÃO INFORMAÇÕES SOBRE O JOGO: */
+    .section-the-game {padding: 60px 2%; border-top: 4px solid #959698;}
+    .section-the-game .flex-info-game:not(:last-child) {margin-bottom: 20px;}
+
+    /* SEÇÃO DE WALLPAPERS DO SITE: */
+    .mini-img-wrapper {padding: 5px;}
+}
+@media screen and (max-width: 580px) {
+    /* SEÇÃO INFORMAÇÕES SOBRE O JOGO: */
+    .flex-info-game .text-flex-info-game, 
+    .flex-info-game .img-flex-info-game {width: 94%;}
+
+    /* SEÇÃO ENTRAR EM CONTATO POR EMAIL COM A EMPRESA: */
+    .section-send-email p {width: 95%; margin: 20px 0;}
+    .section-send-email form {display: flex; width: 85%;}
+    .section-send-email form input[type=submit] {font-size: 16px;}
+
+    /* SEÇÃO DE WALLPAPERS DO SITE: */
+    .wallpaper-selected-zoom, .nav-gallery-parent {width: 95%;}
+    .mini-img-wrapper {padding: 3px;}
+
+    /* SEÇÃO ENTRAR EM CONTATO POR EMAIL: */
+    .section-send-email {height: 570px;}
+
+
+    /* SEÇÃO TRAILER DO JOGO: */
+    .section-trailer-game .trailer-game {
+        width: 90%;
+        height: 40%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 3px solid rgb(247, 30, 25);
+    }
+
+    .section-trailer-game h2 {width: 100%;}
+}
